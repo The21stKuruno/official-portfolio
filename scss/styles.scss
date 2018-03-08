@@ -1,0 +1,9 @@
+@import "variables";
+@import "reset";
+@import "mixins";
+
+header {
+  width: 100%;
+  background: $headerWhite;
+  height: 92px;
+}
