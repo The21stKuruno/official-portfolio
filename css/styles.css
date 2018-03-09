@@ -1,6 +1,7 @@
 body {
   background: #FFFFFF;
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  position: relative;
 }
 
 html, body, ul, ol, li, form, fieldset, legend {
@@ -16,16 +17,78 @@ fieldset, img {
   border: 0;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1180px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background: #f2f2f2;
+  height: 60px;
+}
+
+header .header-child {
+  float: left;
+  width: 33.33333%;
+}
+
+header #my-logo {
+  width: 40px;
+  height: 40px;
+  padding-top: 11px;
+}
+
+header li {
+  float: left;
+  padding-top: 19.6px;
+}
+
+header a {
+  font-size: 1.3rem;
+  color: #161616;
+  text-decoration: none;
+}
+
+header nav li {
+  width: 20%;
+  text-align: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-header {
+header #social-links {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: right;
+  padding-left: 17%;
+}
+
+header #social-links li {
+  width: 25%;
+}
+
+header #social-links li:nth-child(4) {
+  margin-right: 0;
+}
+
+main #banner {
+  overflow: hidden;
+  background: url(https://static.pexels.com/photos/34676/pexels-photo.jpg) no-repeat center center;
+  background-color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
-  background: #e8e8e8;
-  height: 92px;
+  height: 100vh;
 }
