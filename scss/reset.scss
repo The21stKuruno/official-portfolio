@@ -1,7 +1,7 @@
 body {
   background: $pureWhite;
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-  position: relative;
+  color: $defaultColor;
 }
 
 html, body, ul, ol, li, form, fieldset, legend {
@@ -24,7 +24,7 @@ li {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1180px;
+  max-width: 1024px;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 10px;
 }

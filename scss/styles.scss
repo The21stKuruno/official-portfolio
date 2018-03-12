@@ -3,57 +3,101 @@
 @import "mixins";
 
 header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
   width: 100%;
-  background: $headerWhite;
-  height: 60px;
-  .header-child {
-    float: left;
-    width: (100% / 3);
+  height: 52px;
+  background-color: $headerWhite;
+  position: absolute;
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
   }
   #my-logo {
-    width: 40px;
-    height: 40px;
-    padding-top: 11px;
-  }
-  li {
-    float: left;
-    padding-top: 19.6px;
-  }
-  a {
-    font-size: 1.3rem;
-    color: $defaultColor;
-    text-decoration: none;
+    height: 52px;
   }
   nav {
-    li {
-      width: (100% / 5);
-      text-align: center;
-      box-sizing: border-box;
-    }
   }
   #social-links {
-    box-sizing: border-box;
-    text-align: right;
-    padding-left: 17%;
-    li {
-      width: (100% / 4);
-    }
-    li:nth-child(4) {
-      margin-right: 0;
-    }
+  }
+  img {
+    padding: 7px 0;
+    width: 38px;
+    height: 38px;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 10px;
+  }
+  #social-links li:last-child {
+    padding-right: 0;
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: $defaultColor;
+    font-size: 1.1rem;
   }
 }
+// End of Header
 main {
   #banner {
     overflow: hidden;
     background: url(https://static.pexels.com/photos/34676/pexels-photo.jpg) no-repeat center center;
     background-color: $backgroundColor;
     background-size: cover;
-    background-attachment: fixed;
     width: 100%;
     height: 100vh;
+  }
+  #latest-work {
+    .border-between {
+      display: block;
+      margin-top: 10%;
+      height: 1px;
+      border-bottom: $boderColor solid 1px;
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    h3 {
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      top: -12px;
+      background: $pureWhite;
+      width: 250px;
+      font-weight: normal;
+      letter-spacing: 1px;
+      font-size: .9rem;
+      text-transform: uppercase;
+      color: $defaultColor;
+    }
+    .three-projects {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    figure {
+      text-align: center;
+      background: grey;
+    }
+  }
+}
+// End of Main
+footer {
+  box-sizing: border-box;
+  margin-top: 10%;
+  background: $headerWhite;
+  height: 52px;
+  padding: 18px;
+  .footer-inner {
+    text-align: center;
+  }
+  p {
+    font-size: 1.1rem;
   }
 }
