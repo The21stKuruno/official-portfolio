@@ -1,10 +1,10 @@
 body {
   background: $pureWhite;
-  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   color: $defaultColor;
 }
 
-html, body, ul, ol, li, form, fieldset, legend {
+html, body, ul, ol, li, form, fieldset, legend, figure, img{
   margin: 0;
   padding: 0;
 }
@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
 }
 
-fieldset, img {
+fieldset, img, figure {
   border: 0;
 }
 
