@@ -24,7 +24,7 @@ li {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1080px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 10px;
@@ -33,7 +33,7 @@ li {
 header {
   width: 100%;
   height: 72px;
-  background-color: #f7f7f7;
+  background-color: #fff;
   position: absolute;
 }
 
@@ -41,8 +41,6 @@ header .header-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -102,9 +100,15 @@ header #social-links {
   height: 100vh;
 }
 
+#latest-work {
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  padding-top: 8%;
+  padding-bottom: 1%;
+}
+
 #latest-work .border-between {
   display: block;
-  margin-top: 10%;
   height: 1px;
   background-color: #DDD;
   border-bottom: #fff solid 1px;
@@ -133,24 +137,24 @@ header #social-links {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 #latest-work figure {
+  width: 32%;
+  min-width: 290px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 300px;
   background: #fff;
   padding: 35px 20px 25px 20px;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 7px;
   -webkit-box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   cursor: pointer;
 }
 
@@ -164,12 +168,11 @@ header #social-links {
   display: block;
   border-radius: 7px;
   max-width: 100%;
-  width: 100%;
-  min-width: 250px;
+  width: 250px;
 }
 
 #latest-work h4 {
-  text-align: left;
+  text-align: center;
   font-size: 1.2rem;
   font-weight: normal;
   margin-top: 10px;
@@ -183,23 +186,40 @@ header #social-links {
   background-color: #e8ecf1;
   display: inline-block;
   padding: 0.5em 1em;
-  margin: 5px 1px;
+  margin: 3px 1px;
   border-radius: 1em;
 }
 
 footer {
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 10%;
-  background: #f9f9f9;
-  height: 52px;
+  height: 72px;
   padding: 18px;
 }
 
 footer .footer-inner {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 footer p {
+  padding: 10px;
   font-size: 1.2rem;
+  color: #666;
+}
+
+footer #follow-like-button iframe {
+  padding: 0 5px;
 }
