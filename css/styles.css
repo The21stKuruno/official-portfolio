@@ -2,6 +2,7 @@ body {
   background: #fcfcfc;
   font-family: 'PT Sans Narrow', sans-serif;
   color: #161616;
+  position: relative;
 }
 
 html, body, ul, ol, li, form, fieldset, legend, figure, img {
@@ -30,11 +31,79 @@ li {
   padding: 0 10px;
 }
 
+.current {
+  color: #666;
+}
+
+.w-out-banner {
+  padding-top: 8%;
+  padding-bottom: 1%;
+}
+
+.w-out-banner h3 {
+  color: #666;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: -12px;
+  background: #fcfcfc;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.w-out-banner .border-between {
+  display: block;
+  height: 1px;
+  background-color: #DDD;
+  border-bottom: #fff solid 1px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Cursor */
+.typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 header {
+  top: 0;
   width: 100%;
   height: 72px;
   background-color: #fff;
   position: absolute;
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 header .header-inner {
@@ -81,9 +150,6 @@ header a {
   text-decoration: none;
   text-align: center;
   color: #161616;
-}
-
-header nav {
   font-size: 1.3rem;
 }
 
@@ -98,37 +164,53 @@ header #social-links {
   background-size: cover;
   width: 100%;
   height: 100vh;
-}
-
-#latest-work {
-  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
-  padding-top: 8%;
-  padding-bottom: 1%;
-}
-
-#latest-work .border-between {
-  display: block;
-  height: 1px;
-  background-color: #DDD;
-  border-bottom: #fff solid 1px;
   position: relative;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+#banner .banner-inner {
+  color: #fcfcfc;
+  text-align: center;
   width: 100%;
-  margin-bottom: 30px;
+  margin-top: 18%;
+}
+
+#banner #home-welcome {
+  margin: 0 auto;
+  width: 70%;
+}
+
+#banner h1 {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+
+#banner span {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+#banner #scroll-down {
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 5%;
+  color: #fcfcfc;
+}
+
+#banner p {
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  font-family: 'Overpass Mono', monospace;
 }
 
 #latest-work h3 {
-  color: #666;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  top: -12px;
-  background: #fcfcfc;
   width: 250px;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
 }
 
 #latest-work .three-projects {
@@ -190,6 +272,84 @@ header #social-links {
   border-radius: 1em;
 }
 
+#about-me h3 {
+  width: 120px;
+}
+
+#contact-me h3 {
+  width: 130px;
+}
+
+#contact-me #form-container {
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+}
+
+#contact-me h4 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#contact-me p {
+  font-size: 1.3rem;
+  letter-spacing: .3px;
+}
+
+#contact-me form {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#contact-me .form-input {
+  margin: 5px;
+  padding: 5px;
+}
+
+#contact-me .two-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#contact-me .two-columns input {
+  width: 45%;
+}
+
+#contact-me input, #contact-me textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #666;
+  font-size: 1rem;
+  padding: 6px 10px;
+}
+
+#contact-me textarea {
+  width: 95%;
+}
+
+#contact-me input[type=submit] {
+  width: 40%;
+  font-size: .9rem;
+  padding: 10px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+#contact-me p {
+  font-size: .9rem;
+  color: red;
+}
+
 footer {
   background-color: #fff;
   overflow: hidden;
@@ -214,12 +374,7 @@ footer .footer-inner {
   justify-content: space-between;
 }
 
-footer p {
-  padding: 10px;
+footer p#note {
   font-size: 1.2rem;
   color: #666;
-}
-
-footer #follow-like-button iframe {
-  padding: 0 5px;
 }

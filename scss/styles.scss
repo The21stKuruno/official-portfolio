@@ -2,11 +2,27 @@
 @import "reset";
 @import "mixins";
 
+/* Cursor */
+.typed-cursor{
+	opacity: 1;
+	font-weight: 100;
+	animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
 header {
+	top: 0;
   width: 100%;
   height: 72px;
   background-color: $backgroundHeader;
   position: absolute;
+	box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+	z-index: 1;
   .header-inner {
     display: flex;
     justify-content: space-between;
@@ -35,9 +51,7 @@ header {
     text-decoration: none;
     text-align: center;
     color: $defaultColor;
-  }
-  nav {
-    font-size: 1.3rem;
+		font-size: 1.3rem;
   }
   #social-links {
     font-size: 1.6rem;
@@ -52,35 +66,49 @@ header {
   background-size: cover;
   width: 100%;
   height: 100vh;
+	position: relative;
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  .banner-inner {
+    color: $pureWhite;
+    text-align: center;
+    width: 100%;
+    margin-top: 18%;
+  }
+	#home-welcome {
+		margin: 0 auto;
+		width: 70%;
+	}
+  h1 {
+    font-size: 2.4rem;
+		letter-spacing: 1px;
+  }
+	span {
+		font-size: 1rem;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+	#scroll-down {
+		text-align: center;
+		width: 100%;
+		font-size: 1.2rem;
+		position: absolute;
+		bottom: 5%;
+		color: $pureWhite;
+	}
+	p {
+		margin-bottom: 5px;
+		letter-spacing: 2px;
+		font-size: 0.8rem;
+		text-transform: capitalize;
+		font-family: 'Overpass Mono', monospace;
+	}
 }
 // End of Banner
 
 #latest-work {
-  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
-  padding-top: 8%;
-  padding-bottom: 1%;
-  .border-between {
-    display: block;
-    height: 1px;
-    background-color: #DDD;
-    border-bottom: #fff solid 1px;
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  h3 {
-    color: #666;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    top: -12px;
-    background: $pureWhite;
+	h3 {
     width: 250px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-  }
+	}
   .three-projects {
     display: flex;
     flex-wrap: wrap;
@@ -127,12 +155,76 @@ header {
   }
 }
 // End of Latest Work
-
+#about-me {
+	h3 {
+		width: 120px;
+	}
+}
+// End of About
+#contact-me {
+	h3 {
+		width: 130px;
+	}
+	#form-container {
+		padding-top: 30px;
+		margin: 0 auto;
+		width: 70%;
+		text-align: center;
+	}
+	h4 {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	p {
+		font-size: 1.3rem;
+		letter-spacing: .3px;
+	}
+	form {
+		padding: 10px;
+		box-sizing: border-box;
+		width: 100%;
+	}
+	.form-input {
+		margin: 5px;
+		padding: 5px;
+	}
+	.two-columns {
+		display: flex;
+		justify-content: space-around;
+		input {
+			width: 45%;
+		}
+	}
+	input, textarea {
+		box-sizing: border-box;
+		width: 100%;
+		border-radius: 4px;
+		border: 1px solid #666;
+		font-size: 1rem;
+		padding: 6px 10px;
+	}
+	textarea {
+		width: 95%;
+	}
+	input[type=submit] {
+		width: 40%;
+		font-size: .9rem;
+		padding: 10px;
+		text-transform: uppercase;
+		outline: none;
+	}
+	p {
+		font-size: .9rem;
+		color: red;
+	}
+}
 // End of Main
 footer {
   background-color: $backgroundHeader;
   overflow: hidden;
-  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   margin-top: 10%;
   height: 72px;
@@ -142,14 +234,8 @@ footer {
     align-items: center;
     justify-content: space-between;
   }
-  p {
-    padding: 10px;
+  p#note {
     font-size: 1.2rem;
     color: #666;
-  }
-  #follow-like-button {
-    iframe {
-      padding: 0 5px;
-    }
   }
 }

@@ -2,6 +2,7 @@ body {
   background: $pureWhite;
   font-family: 'PT Sans Narrow', sans-serif;
   color: $defaultColor;
+  position: relative;
 }
 
 html, body, ul, ol, li, form, fieldset, legend, figure, img{
@@ -27,4 +28,33 @@ li {
   max-width: 1080px;
   box-sizing: border-box;
   padding: 0 10px;
+}
+.current {
+  color: #666;
+}
+
+.w-out-banner {
+  padding-top: 8%;
+  padding-bottom: 1%;
+  h3 {
+    color: #666;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -12px;
+    background: $pureWhite;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  .border-between {
+    display: block;
+    height: 1px;
+    background-color: #DDD;
+    border-bottom: #fff solid 1px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }

@@ -12,8 +12,13 @@
   <meta property="og:title" content="Cris-Aian Vergara Portfolio Website">
   <link rel="shorcut icon" type="image/png" href="img/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,600" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/typed.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
   <header>
@@ -25,7 +30,7 @@
       </div>
       <nav>
         <ul>
-          <li><a class="current" href="#">home</a></li>
+          <li><a class="current" href="index.html">home</a></li>
           <li><a href="#">about</a></li>
           <li><a href="#">portfolio</a></li>
           <li><a href="#">blog</a></li>
@@ -46,9 +51,22 @@
   <main>
     <section id="banner">
       <div class="banner-inner container">
+        <div class="" id="home-welcome">
+          <h1>Hi, I'm Cris-Aian Vergara a Front End Developer from Manila, Philippines.</h1>
+          <h3><span class="element"></span></h3>
+          <div id="typed-strings">
+            <p>Fast-Learner | Forward-Thinker | Maker</p>
+          </div>
+          <span id="typed"></span>
+        </div>
+      </div>
+      <div class="" id="scroll-down">
+        <p>Learn more what I do</p>
+        <i class="fas fa-chevron-down"></i>
+      </div>
       </div>
     </section>
-    <section id="latest-work">
+    <section id="latest-work" class="w-out-banner">
       <div class="latest-work-inner container">
         <span class="border-between">
           <h3>Some Of My Latest Work</h3>
@@ -86,6 +104,43 @@
             <span>Jquery</span>
             <span>ReactJs</span>
           </figure>
+        </div>
+      </div>
+    </section>
+    <section id="about-me" class="w-out-banner">
+      <div class="about-me-inner container">
+        <span class="border-between">
+          <h3>About Me</h3>
+        </span>
+      </div>
+    </section>
+    <section id="contact-me" class="w-out-banner">
+      <div class="contact-me-inner container">
+        <span class="border-between">
+          <h3>Contact Me</h3>
+        </span>
+        <div class="" id="form-container">
+          <h4>Ok, just a few quick questions.</h4>
+          <p>After you introduce yourself and your project, I'll get in touch with you to schedule a time to chat. You should expect to hear from me in a day or so.</p>
+          <form class="">
+            <div class="form-input two-columns">
+              <input type="text" name="" value="">
+              <input type="email" name="" value="">
+            </div>
+            <div class="form-input two-columns">
+              <input type="website" name="" value="">
+              <input type="text" name="" value="">
+            </div>
+            <div class="form-input">
+              <textarea name="name" rows="8" cols="80"></textarea>
+            </div>
+            <div class="form-input">
+              <input type="submit" name="" value="Submit your project">
+            </div>
+            <div class="">
+              <p id="note"><span>*</span> Required</p>
+            </div>
+          </form>
         </div>
       </div>
     </section>
