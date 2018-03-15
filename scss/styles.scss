@@ -197,26 +197,30 @@ header {
 			width: 45%;
 		}
 	}
+	input {
+		font-size: 1rem;
+	}
 	input, textarea {
 		box-sizing: border-box;
 		width: 100%;
 		border-radius: 4px;
 		border: 1px solid #666;
-		font-size: 1rem;
 		padding: 6px 10px;
 	}
 	textarea {
+	  font-family: 'PT Sans Narrow', sans-serif;
 		width: 95%;
+	  font-size: 1.2rem;
 	}
 	input[type=submit] {
 		width: 40%;
-		font-size: .9rem;
+		font-size: .8rem;
 		padding: 10px;
 		text-transform: uppercase;
 		outline: none;
 	}
-	p {
-		font-size: .9rem;
+	p#note {
+		font-size: .7rem;
 		color: red;
 	}
 }
@@ -234,7 +238,7 @@ footer {
     align-items: center;
     justify-content: space-between;
   }
-  p#note {
+  p {
     font-size: 1.2rem;
     color: #666;
   }
