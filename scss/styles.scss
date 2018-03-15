@@ -21,7 +21,7 @@ header {
   height: 72px;
   background-color: $backgroundHeader;
   position: absolute;
-	box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
 	z-index: 1;
   .header-inner {
     display: flex;
@@ -31,6 +31,7 @@ header {
   }
   #my-logo {
     height: 72px;
+		display: block;
   }
   img {
     padding: 10px 0;
@@ -41,17 +42,28 @@ header {
     display: flex;
   }
   li {
-    padding: 10px;
     flex: 1 1 0;
   }
   #social-links li:last-child {
     padding-right: 0;
   }
-  a {
+	a {
+		transition: linear .2s;
+	}
+	nav a {
+		font-size: 1.3rem;
+		padding: 10px 0px;
+		border-bottom: 1px solid #fff;
+		&:hover {
+			border-bottom: 1.5px solid #28a745;;
+		}
+	}
+  nav a, #social-links a {
+		display: block;
+		margin: 0 10px;
     text-decoration: none;
     text-align: center;
     color: $defaultColor;
-		font-size: 1.3rem;
   }
   #social-links {
     font-size: 1.6rem;
@@ -78,12 +90,12 @@ header {
 		position: absolute;
 		width: 100%;
 		left: 0;
-		top: 30%;
+		top: 35%;
 	}
 	#scroll-down {
 		text-align: center;
 		width: 100%;
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		position: absolute;
 		bottom: 5%;
 		left: 0;
@@ -106,6 +118,9 @@ header {
 		font-size: 0.8rem;
 		text-transform: capitalize;
 		font-family: 'Overpass Mono', monospace;
+	}
+	a {
+		color: $pureWhite;
 	}
 }
 // End of Banner
@@ -158,11 +173,71 @@ header {
     margin: 3px 1px;
     border-radius: 1em;
   }
+	p {
+		text-align: center;
+		letter-spacing: .5px;
+		margin: 45px 0 0 0;
+		font-size: 1.1rem;
+	}
+	#more-projects {
+	border-bottom: 1px dotted #4288DC;
+	text-decoration: none;
+	color: #5EA4F7;
+	font-size: 1rem;
+		&:hover {
+			color: #4288DC;
+		}
+	}
 }
 // End of Latest Work
 #about-me {
 	h3 {
 		width: 120px;
+	}
+	h4 {
+	}
+	.about-container {
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+		margin: 10px;
+		display: flex;
+		justify-content: center;
+	}
+	.bit-about {
+		margin: 10px;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	img {
+		border-radius: 6px;
+		width: 300px;
+		height: auto;
+		display: block;
+	}
+	h4 {
+		padding-top: 10px;
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+	span {
+		font-size: 1.2rem;
+		font-weight: 500;
+		letter-spacing: .3px;
+		display: block;
+	}
+	p {
+		margin-top: 20px;
+		font-size: 1.1rem;
+	}
+	strong {
+		font-size: 1.4rem;
+	}
+	#skills {
+		margin-top: 30px;
+		letter-spacing: .7px;
 	}
 }
 // End of About
@@ -218,12 +293,10 @@ header {
 	  font-size: 1.2rem;
 	}
 	input[type=submit] {
-		text-align: center;
 		border-radius: 6px;
-		width: 40%;
-		min-width: 200px;
+		width: auto;
 		font-size: .9rem;
-		padding: 10px 40px;
+		padding: 10px 50px;
 		color: $pureWhite;
 		cursor: pointer;
 		line-height: 20px;
