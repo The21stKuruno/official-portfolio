@@ -89,6 +89,9 @@ header {
   }
   #social-links {
     font-size: 1.6rem;
+		@include mQ(768px) {
+			display: none;
+		}
   }
 }
 // End of Header
@@ -128,11 +131,17 @@ header {
 		margin: 20px auto;
     font-size: 2.4rem;
 		letter-spacing: 1px;
+		@include mQ(768px) {
+				font-size: 2.1rem;
+		}
   }
 	span {
 		font-size: 1rem;
 		font-weight: normal;
 		letter-spacing: 1px;
+		@include mQ(768px) {
+			font-size: .8rem;
+		}
 	}
 	p {
 		margin-bottom: 5px;
@@ -140,6 +149,9 @@ header {
 		font-size: 0.8rem;
 		text-transform: capitalize;
 		font-family: 'Overpass Mono', monospace;
+		@include mQ(768px) {
+			font-size: .7rem;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -148,9 +160,7 @@ header {
 }
 // End of Banner
 #scroll-more-section {
-	content: "";
-	clear: both;
-	display: block;
+	 @include clearFix;
 }
 #latest-work-section {
 	h3 {
@@ -163,7 +173,6 @@ header {
   }
   figure {
     width: 32%;
-    min-width: 290px;
     box-sizing: border-box;
     background: $backgroundColor;
     padding: 35px 20px 25px 20px;
@@ -175,13 +184,19 @@ header {
     &:hover {
       box-shadow: 0 20px 45px -15px rgba(0, 0, 0, .4);
     }
+		@include mQ(768px) {
+			padding-bottom: 1px;
+		}
+		@include mQ(667px) {
+		}
   }
   img {
     margin: 0 auto;
     display: block;
     border-radius: 7px;
     max-width: 100%;
-    width: 250px;
+		@include mQ(667px) {
+		}
   }
   h4 {
     text-align: center;
@@ -190,6 +205,9 @@ header {
     margin-top: 10px;
     margin-bottom: 20px;
     letter-spacing: .5px;
+		@include mQ(768px) {
+			font-size: .9rem;
+		}
   }
   figure span {
     font-size: 0.8rem;
@@ -197,8 +215,14 @@ header {
     background-color: rgb(232, 236, 241);
     display: inline-block;
     padding: 0.5em 1em;
-    margin: 3px 1px;
+    margin: 2px 1px;
     border-radius: 1em;
+		@include mQ(768px) {
+		display: none;
+		}
+		@include mQ(668px) {
+		display: inline-block;
+		}
   }
 	p {
 		text-align: center;
@@ -231,11 +255,15 @@ header {
 		margin: 10px;
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 	.bit-about {
 		margin: 10px;
 		padding: 10px;
 		box-sizing: border-box;
+		@include mQ(1002px) {
+			text-align: center;
+		}
 	}
 	img {
 		border-radius: 6px;

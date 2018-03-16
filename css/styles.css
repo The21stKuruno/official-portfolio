@@ -195,6 +195,12 @@ header #social-links {
   font-size: 1.6rem;
 }
 
+@media screen and (max-width: 768px) {
+  header #social-links {
+    display: none;
+  }
+}
+
 #banner {
   overflow: hidden;
   background: url(https://static.pexels.com/photos/34676/pexels-photo.jpg) no-repeat center center;
@@ -238,10 +244,22 @@ header #social-links {
   letter-spacing: 1px;
 }
 
+@media screen and (max-width: 768px) {
+  #banner h1 {
+    font-size: 2.1rem;
+  }
+}
+
 #banner span {
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  #banner span {
+    font-size: .8rem;
+  }
 }
 
 #banner p {
@@ -252,15 +270,21 @@ header #social-links {
   font-family: 'Overpass Mono', monospace;
 }
 
+@media screen and (max-width: 768px) {
+  #banner p {
+    font-size: .7rem;
+  }
+}
+
 #banner a {
   text-decoration: none;
   color: #fcfcfc;
 }
 
-#scroll-more-section {
+#scroll-more-section:after {
   content: "";
-  clear: both;
   display: block;
+  clear: both;
 }
 
 #latest-work-section h3 {
@@ -279,7 +303,6 @@ header #social-links {
 
 #latest-work-section figure {
   width: 32%;
-  min-width: 290px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: #fff;
@@ -299,12 +322,17 @@ header #social-links {
   box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 768px) {
+  #latest-work-section figure {
+    padding-bottom: 1px;
+  }
+}
+
 #latest-work-section img {
   margin: 0 auto;
   display: block;
   border-radius: 7px;
   max-width: 100%;
-  width: 250px;
 }
 
 #latest-work-section h4 {
@@ -316,14 +344,32 @@ header #social-links {
   letter-spacing: .5px;
 }
 
+@media screen and (max-width: 768px) {
+  #latest-work-section h4 {
+    font-size: .9rem;
+  }
+}
+
 #latest-work-section figure span {
   font-size: 0.8rem;
   color: #6c737e;
   background-color: #e8ecf1;
   display: inline-block;
   padding: 0.5em 1em;
-  margin: 3px 1px;
+  margin: 2px 1px;
   border-radius: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  #latest-work-section figure span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  #latest-work-section figure span {
+    display: inline-block;
+  }
 }
 
 #latest-work-section p {
@@ -361,6 +407,8 @@ header #social-links {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 #about-me-section .bit-about {
@@ -368,6 +416,12 @@ header #social-links {
   padding: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1002px) {
+  #about-me-section .bit-about {
+    text-align: center;
+  }
 }
 
 #about-me-section img {

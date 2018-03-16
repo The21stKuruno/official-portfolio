@@ -2,6 +2,7 @@ $(function() {
   setTypeAction();
   setBindings();
   setGoToTop();
+  setFadeScroll();
 });
 
 function setTypeAction() {
@@ -26,12 +27,14 @@ function setBindings() {
 }
 
 function setGoToTop() {
-      var offset = 300;
+      var offset = 320;
       var duration = 800;
 
       $(window).scroll(function() {
         if($(this).scrollTop() > offset){
           $('#go-top').fadeIn(duration);
+          $('.fade-me').fadeIn(duration);
+
         }
         else {
           $('#go-top').fadeOut(duration);
@@ -43,4 +46,19 @@ function setGoToTop() {
     		$("html, body").animate({scrollTop : 0}, 800);
     		return false;
     	});
+}
+
+function setFadeScroll() {
+  var documentEl = $(document),
+      fadeElem = $('.fade-scroll');
+
+  documentEl.on('scroll', function() {
+    var currScrollPos = document.scrollTop();
+
+    fadeElem.each(function() {
+      var $this = $this,
+          elemOffsetTop = $this.offset().top;
+        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 -(currScrollPos-elemOffsetTop)/ 400);
+    });
+  });
 }
