@@ -32,7 +32,7 @@ li {
 }
 
 .w-out-banner {
-  padding-top: 8%;
+  padding-top: 5%;
   padding-bottom: 1%;
 }
 
@@ -59,7 +59,6 @@ li {
   margin-bottom: 30px;
 }
 
-/* Cursor */
 .typed-cursor {
   opacity: 1;
   font-weight: 100;
@@ -91,11 +90,35 @@ li {
   }
 }
 
+a#go-top {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  padding: 3px 7px 5px 7px;
+  font-size: .9rem;
+  cursor: pointer;
+  display: none;
+  z-index: 0;
+  color: #fcfcfc;
+  line-height: 20px;
+  background-color: #28a745;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#34d058), color-stop(90%, #28a745));
+  background-image: -webkit-linear-gradient(top, #34d058 0%, #28a745 90%);
+  background-image: -o-linear-gradient(top, #34d058 0%, #28a745 90%);
+  background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+  background-repeat: repeat-x;
+  background-position: -1px -1px;
+  text-transform: capitalize;
+}
+
 header {
   top: 0;
   width: 100%;
   height: 72px;
-  background-color: #fff;
+  background-color: white;
   position: absolute;
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
@@ -149,13 +172,15 @@ header a {
 }
 
 header nav a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 1.3rem;
   padding: 10px 0px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid white;
 }
 
 header nav a:hover {
-  border-bottom: 1.5px solid #28a745;
+  border-bottom: 1px solid #28a745;
 }
 
 header nav a, header #social-links a {
@@ -228,14 +253,21 @@ header #social-links {
 }
 
 #banner a {
+  text-decoration: none;
   color: #fcfcfc;
 }
 
-#latest-work h3 {
+#scroll-more-section {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#latest-work-section h3 {
   width: 250px;
 }
 
-#latest-work .three-projects {
+#latest-work-section .three-projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,7 +277,7 @@ header #social-links {
   justify-content: space-around;
 }
 
-#latest-work figure {
+#latest-work-section figure {
   width: 32%;
   min-width: 290px;
   -webkit-box-sizing: border-box;
@@ -262,12 +294,12 @@ header #social-links {
   cursor: pointer;
 }
 
-#latest-work figure:hover {
+#latest-work-section figure:hover {
   -webkit-box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.4);
   box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.4);
 }
 
-#latest-work img {
+#latest-work-section img {
   margin: 0 auto;
   display: block;
   border-radius: 7px;
@@ -275,7 +307,7 @@ header #social-links {
   width: 250px;
 }
 
-#latest-work h4 {
+#latest-work-section h4 {
   text-align: center;
   font-size: 1.2rem;
   font-weight: normal;
@@ -284,7 +316,7 @@ header #social-links {
   letter-spacing: .5px;
 }
 
-#latest-work figure span {
+#latest-work-section figure span {
   font-size: 0.8rem;
   color: #6c737e;
   background-color: #e8ecf1;
@@ -294,29 +326,29 @@ header #social-links {
   border-radius: 1em;
 }
 
-#latest-work p {
+#latest-work-section p {
   text-align: center;
   letter-spacing: .5px;
   margin: 45px 0 0 0;
   font-size: 1.1rem;
 }
 
-#latest-work #more-projects {
+#latest-work-section #more-projects {
   border-bottom: 1px dotted #4288DC;
   text-decoration: none;
   color: #5EA4F7;
   font-size: 1rem;
 }
 
-#latest-work #more-projects:hover {
+#latest-work-section #more-projects:hover {
   color: #4288DC;
 }
 
-#about-me h3 {
+#about-me-section h3 {
   width: 120px;
 }
 
-#about-me .about-container {
+#about-me-section .about-container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -331,84 +363,83 @@ header #social-links {
   justify-content: center;
 }
 
-#about-me .bit-about {
+#about-me-section .bit-about {
   margin: 10px;
   padding: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-#about-me img {
+#about-me-section img {
   border-radius: 6px;
   width: 300px;
   height: auto;
   display: block;
 }
 
-#about-me h4 {
+#about-me-section h4 {
   padding-top: 10px;
   font-size: 1.6rem;
   letter-spacing: 1px;
   margin-bottom: 0;
 }
 
-#about-me span {
-  font-size: 1.2rem;
-  font-weight: 500;
+#about-me-section span {
+  font-size: 1rem;
   letter-spacing: .3px;
   display: block;
 }
 
-#about-me p {
+#about-me-section p {
   margin-top: 20px;
   font-size: 1.1rem;
 }
 
-#about-me strong {
+#about-me-section strong {
   font-size: 1.4rem;
 }
 
-#about-me #skills {
+#about-me-section #skills {
   margin-top: 30px;
   letter-spacing: .7px;
 }
 
-#contact-me h3 {
+#contact-me-section h3 {
   width: 130px;
 }
 
-#contact-me #form-container {
+#contact-me-section #form-container {
   padding-top: 30px;
   margin: 0 auto;
   width: 70%;
   text-align: center;
 }
 
-#contact-me h4 {
+#contact-me-section h4 {
   font-size: 1.6rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-#contact-me p {
+#contact-me-section p {
   font-size: 1.3rem;
   letter-spacing: .3px;
 }
 
-#contact-me form {
+#contact-me-section form {
   padding: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
 }
 
-#contact-me .form-input {
+#contact-me-section .form-input {
   margin: 5px;
   padding: 5px;
 }
 
-#contact-me .two-columns {
+#contact-me-section .two-columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,15 +447,15 @@ header #social-links {
   justify-content: space-around;
 }
 
-#contact-me .two-columns input {
+#contact-me-section .two-columns input {
   width: 45%;
 }
 
-#contact-me input {
+#contact-me-section input {
   font-size: 1rem;
 }
 
-#contact-me input, #contact-me textarea {
+#contact-me-section input, #contact-me-section textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -433,13 +464,13 @@ header #social-links {
   padding: 6px 10px;
 }
 
-#contact-me textarea {
+#contact-me-section textarea {
   font-family: 'PT Sans Narrow', sans-serif;
   width: 95%;
   font-size: 1.2rem;
 }
 
-#contact-me input[type=submit] {
+#contact-me-section input[type=submit] {
   border-radius: 6px;
   width: auto;
   font-size: .9rem;
@@ -457,13 +488,13 @@ header #social-links {
   background-position: -1px -1px;
 }
 
-#contact-me p#note {
+#contact-me-section p#note {
   font-size: .7rem;
   color: red;
 }
 
 footer {
-  background-color: #fff;
+  background-color: white;
   overflow: hidden;
   -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);

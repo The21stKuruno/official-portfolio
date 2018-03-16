@@ -20,7 +20,7 @@
   <script src="js/typed.js"></script>
   <script src="js/main.js"></script>
 </head>
-<body>
+<body id="home-section">
   <header>
     <div class="header-inner container">
       <div id="my-logo">
@@ -30,11 +30,11 @@
       </div>
       <nav>
         <ul>
-          <li><a class="current" href="index.html">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a id="home" class="current" href="#home-section">home</a></li>
+          <li><a id="about-me" href="#about-me-section">about</a></li>
+          <li><a id="latest-work" href="#latest-work-section">portfolio</a></li>
+          <li><a id="blog" href="#">blog</a></li>
+          <li><a id="contact-me" href="#contact-me-section">contact</a></li>
         </ul>
       </nav>
       <div id="social-links">
@@ -60,15 +60,16 @@
           <span id="typed"></span>
         </div>
         <div class="" id="scroll-down">
-          <p>Wanna Learn More!</p>
-          <a href="#latest-work">
+          <a id="scroll-more" href="#scroll-more-section">
+            <p>Wanna Learn More!</p>
             <i class="fas fa-chevron-down"></i>
           </a>
         </div>
       </div>
       </div>
     </section>
-    <section id="latest-work" class="w-out-banner">
+    <span id="scroll-more-section"></span>
+    <section id="latest-work-section" class="w-out-banner">
       <div class="latest-work-inner container">
         <span class="border-between">
           <h3>Some Of My Latest Work</h3>
@@ -114,7 +115,7 @@
        </p>
       </div>
     </section>
-    <section id="about-me" class="w-out-banner">
+    <section id="about-me-section" class="w-out-banner">
       <div class="about-me-inner container">
         <span class="border-between">
           <h3>About Me</h3>
@@ -127,7 +128,7 @@
             <h4>
               Cris-Aian Vergara
             </h4>
-              <span>-filipino developer <br> -currently living in South Korea</span>
+              <span>-front end developer <br> -based in South Korea</span>
             <p>I enjoy turning complex problems into simple, beautiful and intuitive interface designs.<br> When I'm not coding or pushing pixels, you'll find me in the gym or on the court shooting hoops.</p>
             <p id="skills">
               <strong>Skills: </strong>Html(5) | Css(3) | Javascript(Jquery, ReactJs) | Python(Django)
@@ -136,7 +137,7 @@
         </div>
       </div>
     </section>
-    <section id="contact-me" class="w-out-banner">
+    <section id="contact-me-section" class="w-out-banner">
       <div class="contact-me-inner container">
         <span class="border-between">
           <h3>Contact Me</h3>
@@ -176,5 +177,7 @@
       </div>
     </div>
   </footer>
+  <!-- Go To Top -->
+  <a href="#" id="go-top">got top <i class="fas fa-level-up-alt"></i></a>
 </body>
 </html>
