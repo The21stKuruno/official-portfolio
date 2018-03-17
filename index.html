@@ -28,7 +28,12 @@
           <img id="img-logo" src="img/logo_desktop.png" alt="">
         </a>
       </div>
-      <nav>
+      <div id="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="dropbar">
         <ul>
           <li><a id="home" class="current" href="#home-section">home</a></li>
           <li><a id="about-me" href="#about-me-section">about</a></li>
@@ -146,23 +151,15 @@
           <h4>Ok, just a few quick questions.</h4>
           <p>After you introduce yourself and your project, I'll get in touch with you to schedule a time to chat. You should expect to hear from me in a day or so.</p>
           <form class="">
-            <div class="form-input two-columns">
-              <input type="text" name="" value="" placeholder="Name *">
-              <input type="email" name="" value="" placeholder="Email address *">
+            <div class="input-two-column-container">
+              <input class="input-two-column" type="text" name="" value="" placeholder="Name *">
+              <input class="input-two-column" type="email" name="" value="" placeholder="Email address *">
+              <input class="input-two-column" type="website" name="" value="" placeholder="Website">
+              <input class="input-two-column" type="text" name="" value="" placeholder="Phone number">
             </div>
-            <div class="form-input two-columns">
-              <input type="website" name="" value="" placeholder="Website">
-              <input type="text" name="" value="" placeholder="Phone number">
-            </div>
-            <div class="form-input">
-              <textarea name="name" rows="8" cols="80" placeholder="Tell me about your project... what is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated. *"></textarea>
-            </div>
-            <div class="form-input">
-              <input type="submit" name="" value="Submit your project">
-            </div>
-            <div class="">
-              <p id="note"><span>*</span> Required</p>
-            </div>
+            <textarea name="name" rows="8" cols="80" placeholder="Tell me about your project... what is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated. *"></textarea>
+            <input type="submit" name="" value="Submit your project">
+            <p id="note"><span>*</span> Required</p>
           </form>
         </div>
       </div>

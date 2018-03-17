@@ -3,7 +3,22 @@ $(function() {
   setBindings();
   setGoToTop();
   setFadeScroll();
+  setDropNav();
 });
+
+function setDropNav() {
+  $('#burger-icon').click(function(){
+    $('#dropbar').toggleClass('visible');
+  });
+
+  $('main').click(function(){
+    $('#dropbar').removeClass('visible');
+  });
+
+  $(window).resize(function() {
+  $('#dropbar').removeClass('visible');
+});
+}
 
 function setTypeAction() {
   var typed = new Typed('.element', {
