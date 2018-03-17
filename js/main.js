@@ -2,7 +2,6 @@ $(function() {
   setTypeAction();
   setBindings();
   setGoToTop();
-  setFadeScroll();
   setDropNav();
 });
 
