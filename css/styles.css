@@ -469,14 +469,14 @@ header #social-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 #about-me-section .bit-about {
+  width: 48%;
   margin: 10px;
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -490,8 +490,8 @@ header #social-links {
 }
 
 #about-me-section img {
+  width: 100%;
   border-radius: 6px;
-  width: 300px;
   height: auto;
   display: block;
 }
@@ -523,6 +523,56 @@ header #social-links {
 #about-me-section #skills {
   font-size: 1.1rem;
   margin-top: 30px;
+}
+
+#about-me-section #find-me-on {
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+
+#about-me-section li {
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  color: white;
+  width: 38px;
+  height: 38px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 3px;
+  margin: 2px;
+}
+
+#about-me-section #find-out {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #5EA4F7;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+
+#about-me-section li:nth-child(1) {
+  background: #3b5998;
+}
+
+#about-me-section li:nth-child(2) {
+  background: #55acee;
+}
+
+#about-me-section li:nth-child(3) {
+  background: #e95950;
+}
+
+#about-me-section li:nth-child(4) {
+  background: #ff0000;
+}
+
+#about-me-section li:nth-child(5) {
+  background: #6e5494;
+}
+
+#about-me-section li:nth-child(6) {
+  background: #007bb5;
 }
 
 #contact-me-section h3 {

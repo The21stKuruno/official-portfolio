@@ -31,7 +31,7 @@ function setTypeAction() {
 }
 
 function setBindings() {
-  $("nav a, a#scroll-more",).click(function(e) {
+  $("nav a, a#latest-work",).click(function(e) {
     e.preventDefault();
     var sectionID = e.currentTarget.id + "-section";
 
