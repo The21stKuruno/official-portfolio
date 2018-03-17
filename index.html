@@ -134,8 +134,9 @@
             <h4>
               Cris-Aian Vergara
             </h4>
-              <span>-front end developer <br> -based in South Korea</span>
-            <p>I enjoy turning complex problems into simple, beautiful and intuitive interface designs.<br> When I'm not coding or pushing pixels, you'll find me in the gym or on the court shooting hoops.</p>
+              <span>-front end developer <br> -UX/UI Designer</span>
+            <p>I love building and designing websites while drinking coffee or tea. Watching anime and reading manga is what I do when I'm not coding or programming. For now, I'm living in Daejeon, South Korea.
+            </p>
             <p id="skills">
               <strong>Skills: </strong>Html(5) | Css(3) | Javascript(Jquery, ReactJs) | Python(Django)
             </p>
@@ -163,15 +164,15 @@
         <div class="" id="form-container">
           <h4>Ok, just a few quick questions.</h4>
           <p>After you introduce yourself and your project, I'll get in touch with you to schedule a time to chat. You should expect to hear from me in a day or so.</p>
-          <form class="">
+          <form action="mailto:The21stKuruno@yahoo.com" method="post" enctype="text/plain">
             <div class="input-two-column-container">
-              <input class="input-two-column" type="text" name="" value="" placeholder="Name *">
-              <input class="input-two-column" type="email" name="" value="" placeholder="Email address *">
-              <input class="input-two-column" type="website" name="" value="" placeholder="Website">
-              <input class="input-two-column" type="text" name="" value="" placeholder="Phone number">
+              <input class="input-two-column" type="text" name="fullname" value="" placeholder="Name *" required>
+              <input class="input-two-column" type="email" name="emailaddress" value="" placeholder="Email address *" required>
+              <input class="input-two-column" type="website" name="website" value="" placeholder="Website">
+              <input class="input-two-column" type="text" name="phonenumber" pattern="^\d{3}-\d{4}-\d{4}$" value="" placeholder="Number format: 010-7348-3940">
             </div>
-            <textarea name="name" rows="8" cols="80" placeholder="Tell me about your project... what is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated. *"></textarea>
-            <input type="submit" name="" value="Submit your project">
+            <textarea name="projectdetails" rows="8" cols="80" placeholder="Tell me about your project... what is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated. *" required></textarea>
+            <input type="submit" name="submit" value="Submit your project">
             <p id="note"><span>*</span> Required</p>
           </form>
         </div>
