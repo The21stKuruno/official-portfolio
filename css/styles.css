@@ -156,32 +156,81 @@ header .header-inner {
   position: relative;
 }
 
-header #burger-icon {
+header .icon {
   display: none;
   cursor: pointer;
   position: absolute;
-  padding: 10px;
   width: 50px;
   height: 40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 10px;
   right: 11px;
   border-radius: 4px;
 }
 
 @media screen and (max-width: 668px) {
-  header #burger-icon {
+  header .icon {
     display: block;
   }
 }
 
-header span {
+header .hamburger {
   border-radius: 4px;
-  height: 3px;
   width: 100%;
-  margin-bottom: 5px;
+  height: 3px;
   background: #000;
-  display: block;
+  -webkit-transform: translate(0px, 8px);
+  -ms-transform: translate(0px, 8px);
+  transform: translate(0px, 8px);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+header .hamburger:before,
+header .hamburger:after {
+  border-radius: 4px;
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 3px;
+  background: #000;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+header .hamburger::before {
+  top: -8px;
+}
+
+header .hamburger:after {
+  top: 8px;
+}
+
+header .icon.active .hamburger {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px transparent;
+  box-shadow: 0 2px 5px transparent;
+}
+
+header .icon.active .hamburger:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+header .icon.active .hamburger:after {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 header #my-logo {
@@ -242,6 +291,14 @@ header #social-links li:last-child {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
+    display: block;
+  }
+  header nav a {
+    left: 0;
+    display: block;
+  }
+  header nav a:hover {
+    background: #ededed;
   }
 }
 
@@ -249,7 +306,7 @@ header #dropbar.visible {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-  height: 270px;
+  height: 260px;
 }
 
 header #dropbar.visible a {
@@ -301,6 +358,12 @@ header nav a:hover, header #social-links a:hover {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+}
+
+@media screen and (max-width: 668px) {
+  header nav a, header #social-links a {
+    margin: 0;
+  }
 }
 
 header #social-links {

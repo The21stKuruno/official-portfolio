@@ -1,39 +1,27 @@
 $(function() {
-  setTypeAction();
   setBindings();
   setGoToTop();
   setDropNav();
 });
-
-// Mobile Dropdown Navigation
 function setDropNav() {
-  $('#burger-icon').click(function(){
+  $('.drop-the-nav').click(function(){    $('.icon').toggleClass('active');
     $('#dropbar').toggleClass('visible');
   });
 
   $('main').click(function(){
+    $('.icon').toggleClass('active');
     $('#dropbar').removeClass('visible');
   });
 
   $(window).resize(function() {
+  $('.icon').toggleClass('active');
   $('#dropbar').removeClass('visible');
 });
 }
 
-// Auto Typing Action
-function setTypeAction() {
-  var typed = new Typed('.element', {
-    stringsElement: '#typed-strings',
-    typeSpeed: 110,
-    backDelay: 1000,
-    loop: true,
-    loopCount: Infinity,
-  });
-}
-
 // Navigation Scroll Smooth
 function setBindings() {
-  $("#about-me, #contact-me, a#latest-work",).click(function(e) {
+  $(".smooth-scroll").click(function(e) {
     e.preventDefault();
     var sectionID = e.currentTarget.id + "-section";
 
