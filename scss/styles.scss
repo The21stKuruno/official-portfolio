@@ -242,61 +242,61 @@ header {
 	}
 }
 // End of Banner
-// Latest Work Section Start
-#scroll-more-section {
-	 @include clearFix;
+// Latest Work Section Start And Portfolio Section
+.port-blog-alone {
+	padding-top: 110px;
 }
-#latest-work-section {
+.portfolio-section {
 	h3 {
-    width: 250px;
+		width: 250px;
 	}
-  .three-projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  figure {
-    width: 32%;
-    box-sizing: border-box;
-    background: $backgroundColor;
-    padding: 35px 20px 25px 20px;
-    margin: 10px 0;
-    border-radius: 7px;
-    box-shadow: 0 15px 45px -15px rgba(0, 0, 0, .2);
-    cursor: pointer;
+	.projects {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	figure {
+		width: 32%;
+		box-sizing: border-box;
+		background: $backgroundColor;
+		padding: 35px 20px 25px 20px;
+		margin: 10px 0;
+		border-radius: 7px;
+		box-shadow: 0 15px 45px -15px rgba(0, 0, 0, .2);
+		cursor: pointer;
 		transition: .3s;
-    &:hover {
-      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, .4);
+		&:hover {
+			box-shadow: 0 20px 45px -15px rgba(0, 0, 0, .4);
 			transition: .3s;
-    }
+		}
 		@include mQ(768px) {
 			width: 90%;
 			text-align: center;
 		}
-  }
-  img {
-    margin: 0 auto;
-    display: block;
-    border-radius: 7px;
-    max-width: 100%;
-  }
-  h4 {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    letter-spacing: .5px;
-  }
-  figure span {
-    font-size: 0.8rem;
-    color: rgb(108, 115, 126);
-    background-color: rgb(232, 236, 241);
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 2px 1px;
-    border-radius: 1em;
-  }
+	}
+	img {
+		margin: 0 auto;
+		display: block;
+		border-radius: 7px;
+		max-width: 100%;
+	}
+	h4 {
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: normal;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		letter-spacing: .5px;
+	}
+	figure span {
+		font-size: 0.8rem;
+		color: rgb(108, 115, 126);
+		background-color: rgb(232, 236, 241);
+		display: inline-block;
+		padding: 0.5em 1em;
+		margin: 2px 1px;
+		border-radius: 1em;
+	}
 	p {
 		text-align: center;
 		letter-spacing: .5px;
@@ -316,6 +316,14 @@ header {
 	}
 }
 // End of Latest Work
+// Blog Section
+#blog-section {
+	h1{
+		text-align: center;
+		margin-bottom: 100px;
+	}
+}
+// End of Blog Section
 // About Me Section
 #about-me-section {
 	h3 {

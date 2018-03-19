@@ -407,17 +407,15 @@ header #social-links {
   transition: .3s;
 }
 
-#scroll-more-section:after {
-  content: "";
-  display: block;
-  clear: both;
+.port-blog-alone {
+  padding-top: 110px;
 }
 
-#latest-work-section h3 {
+.portfolio-section h3 {
   width: 250px;
 }
 
-#latest-work-section .three-projects {
+.portfolio-section .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,7 +425,7 @@ header #social-links {
   justify-content: space-around;
 }
 
-#latest-work-section figure {
+.portfolio-section figure {
   width: 32%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -443,7 +441,7 @@ header #social-links {
   transition: .3s;
 }
 
-#latest-work-section figure:hover {
+.portfolio-section figure:hover {
   -webkit-box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.4);
   box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.4);
   -webkit-transition: .3s;
@@ -452,20 +450,20 @@ header #social-links {
 }
 
 @media screen and (max-width: 768px) {
-  #latest-work-section figure {
+  .portfolio-section figure {
     width: 90%;
     text-align: center;
   }
 }
 
-#latest-work-section img {
+.portfolio-section img {
   margin: 0 auto;
   display: block;
   border-radius: 7px;
   max-width: 100%;
 }
 
-#latest-work-section h4 {
+.portfolio-section h4 {
   text-align: center;
   font-size: 1.2rem;
   font-weight: normal;
@@ -474,7 +472,7 @@ header #social-links {
   letter-spacing: .5px;
 }
 
-#latest-work-section figure span {
+.portfolio-section figure span {
   font-size: 0.8rem;
   color: #6c737e;
   background-color: #e8ecf1;
@@ -484,14 +482,14 @@ header #social-links {
   border-radius: 1em;
 }
 
-#latest-work-section p {
+.portfolio-section p {
   text-align: center;
   letter-spacing: .5px;
   margin: 45px 0 0 0;
   font-size: 1.1rem;
 }
 
-#latest-work-section #more-projects {
+.portfolio-section #more-projects {
   border-bottom: 1px dotted #4288DC;
   text-decoration: none;
   color: #5EA4F7;
@@ -501,11 +499,16 @@ header #social-links {
   transition: .3s;
 }
 
-#latest-work-section #more-projects:hover {
+.portfolio-section #more-projects:hover {
   color: #4288DC;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+}
+
+#blog-section h1 {
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 #about-me-section h3 {
