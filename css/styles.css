@@ -96,7 +96,7 @@ a#go-top {
   text-decoration: none;
   border-radius: 4px;
   position: fixed;
-  bottom: 30px;
+  bottom: 28px;
   right: 30px;
   padding: 3px 7px 5px 7px;
   font-size: .9rem;
@@ -383,13 +383,14 @@ header #social-links {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  min-height: 480px;
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 #banner .banner-inner {
   color: #fcfcfc;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
 }
@@ -400,6 +401,12 @@ header #social-links {
   width: 100%;
   left: 0;
   top: 35%;
+}
+
+@media screen and (max-width: 480px) {
+  #banner #home-welcome {
+    top: 30%;
+  }
 }
 
 #banner #scroll-down {
@@ -425,6 +432,7 @@ header #social-links {
 
 @media screen and (max-width: 480px) {
   #banner h1 {
+    min-width: 90%;
     font-size: 1.5rem;
   }
 }

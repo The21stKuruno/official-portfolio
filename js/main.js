@@ -9,12 +9,12 @@ function setDropNav() {
   });
 
   $('main').click(function(){
-    $('.icon').toggleClass('active');
+    $('.icon').removeClass('active');
     $('#dropbar').removeClass('visible');
   });
 
   $(window).resize(function() {
-  $('.icon').toggleClass('active');
+  $('.icon').removeClass('active');
   $('#dropbar').removeClass('visible');
 });
 }
